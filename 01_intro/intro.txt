@@ -1,0 +1,5 @@
+Who are these tutorials for?
+
+These tutorials are for anyone who wants to learn to program. We are going to use c as the programming language because it is usually available on the commandline pre-installed on all unix and unix-like variants including OSX.
+
+I assume no prior experience with programming and do my best to cover each topic with a reasonable degree of throughness. I will try not to overkill it however.

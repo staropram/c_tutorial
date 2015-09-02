@@ -1,0 +1,15 @@
+C was developed about the time that UNIX was born, it was derived from BCPL and then B which were used on the multics project by Ken Thompson in 1970 for a DEC PDP-7. B was interpreted, and typeless. Since it was typeless, it coudn't take advantage of all the "modern" hardware features, For example, byte addressing in the PDP-11.
+
+Ken Thompson and Dennis ritchie started work on a new language C, to overcome these limitations. At the same time UNIX development had started on the PDP-7 in assembly, and the idea was to port it to different families. A portable language was needed. So c was born around 1972
+
+There was no spec at this point, until Brian Kernigahn and Dennis Richie wrote "The C programming language" in 1978, this was kind of like the first spec.
+
+The c language itself is itself quite small, but is typically used with a bunch of system libraries. The latter were thus considered part of the "standard" and are covered in the book.
+
+It wasn't until 1989 that the first official standard version of C came out, called ANSI C. In 1990 the ISO adopted this standard as essentially verbatim and called it C90.
+
+In 1995 another c standard was released; ISO95. This added notably wide character support, which is support for non-ascii and more expansive character sets such as unicode.
+
+In 1999 another standard was released: C99. This added notably one line comments, variable declaration in for loops, declarations outside of blocks, a complex number type, and a boolean type.
+
+The last standard was released was c11, which included notably, threading support.
