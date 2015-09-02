@@ -1,0 +1,1 @@
+default: hellotypes exercise
