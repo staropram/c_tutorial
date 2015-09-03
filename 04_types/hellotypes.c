@@ -3,9 +3,19 @@
 #include <math.h>
 #include <float.h>
 int main(int argc, char **argv) {
+	printf("printf escape characters are prefixed with a backslash \\\n");
+	printf("A literal backslash can be written with: \"\\\\\"\n");
+	printf("Examples:\n\n");
+	printf("\t inverted comma: \"\\\"\" -> \"\n");
+	printf("\t tab: \"\\t\" -> \"\t\"\n");
+	printf("\t two tabs: \"\\t\\t\" -> \"\t\t\"\n");
+	printf("\t newline \\n: \n this is a new line\n");
+	printf("\t literal percent %%%%: \"%%\"\n");
+
+	printf("\nNow for explanation of the types\n");
 
 	// character type
-	printf("char:\n");
+	printf("\nchar:\n");
 	printf("   bits: %d (CHAR_BIT)\n",CHAR_BIT);
 	printf("   signed min,max: %d,%d (SCHAR_MIN,SCHAR_MAX)\n",SCHAR_MIN,SCHAR_MAX);
 	printf("   unsigned min,max: %d,%d (0,UCHAR_MAX)\n",0,UCHAR_MAX);
@@ -115,19 +125,40 @@ int main(int argc, char **argv) {
 	printf("\t%%10.5f:  \"%10.5f\"\n",M_PI);
 
 	// chars
-	printf("a: %c\n",97);
-	printf("b: %c\n",98);
-	printf("c: %c\n",100);
+	printf("\nThe %%c modifier can be used to print ascii characters\n"); 
+	printf("\t\'a\': %c\n",'a');
+	printf("\t\'b\': %c\n",'b');
+	printf("\t\'c\': %c\n",'c');
+
+	printf("\nWe can use the characters themselves or the numerical equivalent:\n");
+	printf("\n\t97: %c\n",97);
+	printf("\t98: %c\n",98);
+	printf("\t99: %c\n",99);
+
+	// see man ascii for these values
+	printf("\nOr the octal equivalent, octals are prefixed by 0:\n");
+	printf("\n\t0141: %c\n",0141);
+	printf("\t0142: %c\n",0142);
+	printf("\t0143: %c\n",0143);
+
+	printf("\nOr the hex equivalent, hexadecimals are prefixed by 0x:\n");
+	printf("\n\t0x61: %c\n",0x61);
+	printf("\t0x62: %c\n",0x62);
+	printf("\t0x63: %c\n",0x63);
 
 	// pointer
-	int x = 3;
-	printf("&x: %p\n",&x);
+	printf("\nTo print a memory address (pointer), use %%p\n");
+	printf("Note that memory address is obtained with the & operator\n");
+	printf("\n\t&argc: %p\n",&argc);
 	
-	// hex
-	printf("255 hex: %x\n",255);
-	printf("255 prefixed hex: %#x\n",255);
-	printf("85 hex: %#x\n",85);
+	// print normal numbers in hex
+	printf("\nDecimal numbers can be printed in hex with the %%x modifier\n");
+	printf("\n\t255 in hex: %x\n",255);
+	printf("\t85 in hex: %x\n",85);
+	printf("\t15 in hex: %x\n",15);
 
-	// literal
-	printf("%%\n");
+	printf("\nTo prefix a hex number with \"0x\" use %%#x:\n");
+	printf("\n\t255 in prefixed hex: %#x\n",255);
+	printf("\t85 in prefixedhex: %#x\n",85);
+	printf("\t15 prefixed hex: %#x\n",15);
 }
