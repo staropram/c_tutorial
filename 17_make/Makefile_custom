@@ -1,0 +1,17 @@
+# this makefile illustrates a custom pattern which takes the
+# last 10 lines of a file
+
+# the default target has a single pre-requisite which is the file
+# we want to build
+default: x.txt.end
+
+# this is the custom pattern that matches x.txt.end
+# it looks for a file x.txt and if it exists, executes the rule
+# the rule uses the automatic variables $^ and $@ to reference
+# the pre-requisites and target name respectively
+%.txt.end: %.txt
+	cat $^ | tail -n 10 > $@
+
+.PHONY: clean
+clean:
+	rm -f *.txt.end

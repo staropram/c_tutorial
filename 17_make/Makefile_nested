@@ -1,0 +1,11 @@
+# this makefile illustrates use of an explicit variable objects
+# as well as the automatic variables $^ and $@ which refers to the
+# pre-requisites and target of the rule respectively
+objects=a.o b.o c.o d.o b_nested.o
+nested: nested.c $(objects)
+	clang $^ -o $@
+
+
+.PHONY: clean
+clean: 
+	rm -f *.o nested

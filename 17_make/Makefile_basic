@@ -1,0 +1,15 @@
+# the main program hello, depends on hello.c and func.o
+hello: hello.c func.o
+	clang hello.c func.o -o our_program
+
+# func.o depends on func.c and func.h
+func.o: func.c func.h
+	clang -c func.c -o func.o
+
+# by declaring a target PHONY, the target name will
+# not be searched for in the execution directory 
+.PHONY: clean
+# the clean target removes any object and executable files
+# created by this makefile
+clean:
+	rm -f *.o hello

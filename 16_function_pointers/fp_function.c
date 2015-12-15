@@ -35,6 +35,8 @@ int main() {
 	printf("mul:\n");
 	blend(a,b,5,mul);
 
+	// if we pass the wrong function type, 
+	// undefined behaviour occurs
 	printf("muld:\n");
 	blend(a,b,5,muld);
 
