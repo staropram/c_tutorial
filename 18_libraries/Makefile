@@ -1,4 +1,3 @@
-CFLAGS=-v
 default: wacky_dynamic wacky_static sdl_example
 
 wacky_static: wacky.c libwacky.a
@@ -21,4 +20,4 @@ sdl_example: sdl_example.c
 
 .PHONY: clean
 clean:
-	rm -f *.o *.so wacky_dynamic wacky_static sdl_example;
+	rm -f *.o *.so *.a wacky_dynamic wacky_static sdl_example;
