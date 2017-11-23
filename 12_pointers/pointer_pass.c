@@ -8,7 +8,7 @@
 // which only has scope within the function "f_broken"
 void f_broken(int *p) {
 	printf("p: %lu\n",p);
-	p = realloc(p,6*sizeof(int));
+	p = realloc(p,6*1024*1024*sizeof(int));
 	printf("p: %lu\n",p);
 }
 
@@ -18,7 +18,7 @@ void f_broken(int *p) {
 // rather than the address p that is passed
 void f_working(int **p) {
 	printf("*p: %lu\n",*p);
-	*p = realloc(*p,6*sizeof(int));
+	*p = realloc(*p,6*1024*1024*sizeof(int));
 	printf("*p: %lu\n",*p);
 }
 
@@ -28,12 +28,12 @@ int main() {
 
 	// we try and change the size of a, using the broken function
 	printf("a before f_broken: %lu\n",a);
-	f_broken(&a);
+	f_broken(a);
 	printf("a after f_broken: %lu\n",a);
 
 	// and now successfully using the working function
 	printf("a before f_working %lu\n",a);
-	f_broken(&a);
+	f_working(&a);
 	printf("a after f_working: %lu\n",a);
 
 	return 0;
