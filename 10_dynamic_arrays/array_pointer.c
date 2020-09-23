@@ -14,6 +14,11 @@ int* create_int_array(int len, int multiplier) {
 	// allocate memory for the integer array
 	int *a = malloc(len*sizeof(int));
 	
+	// deal with error case
+	if(a==NULL) {
+		return a;
+	}
+	
 	// populate it according to the multiplier
 	for(int i=0; i<len; i++) {
 		a[i] = i*multiplier;
