@@ -33,9 +33,8 @@ int main() {
 		f
 	);
 	fclose(f);
-	printf("objects written: %ld\n",objects_written);
+	printf("objects written: %ld\n\n",objects_written);
 
-	/*
 	for(int i=0; i<50; i++) {
 		printf("%d: %d %d %d\n",
 			i,
@@ -44,7 +43,6 @@ int main() {
 			pixel_array2[i].b
 		);
 	}
-	*/
 
 	return 0;
 }
