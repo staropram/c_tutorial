@@ -2,7 +2,7 @@
 int main() {
 	// the size of an array can also be determined by a variable in C99
 	int array_size = 50;
-	// note that it is not permitted to initialize the values
+	// note that it is not permitted to initialise the values
 	// of the array using {a,b, ... } notation since the size
 	// of the array is not known until runtime
 	int a[array_size];
