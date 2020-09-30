@@ -1,1 +1,1 @@
-default: switch_fallthrough #hello_switch
+default: switch_fallthrough hello_switch

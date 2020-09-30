@@ -1,1 +1,1 @@
-default: recursion #bigger_function #declaration #hello_function
+default: recursion bigger_function declaration hello_function

@@ -36,7 +36,10 @@ int main() {
 	// that the structure passed to print_pixel is a
 	// copy, and modifying it in the function doesn't
 	// modify it here
+  	printf("\nCalling print_pixel\n");
 	print_pixel(p);
+	printf("\nDone calling print_pixel\n");
+	
 	printf("%u %u %u\n",p.r,p.g,p.b);
 
 

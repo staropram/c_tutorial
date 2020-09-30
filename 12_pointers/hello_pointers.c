@@ -20,5 +20,5 @@ int main() {
 	printf("**app: %d\n",**app);
 	// ... or the pointer to the pointer to the integer pointer three
 	// times
-	printf("***app: %d\n",***appp);
+	printf("***appp: %d\n",***appp);
 }

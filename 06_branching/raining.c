@@ -11,7 +11,7 @@ int main() {
 
 	if(raining) {
 		if(has_umbrella) {
-			printf("go_out\n")
+			printf("go_out\n");
 		} else {
 			printf("stay in\n");
 		}
