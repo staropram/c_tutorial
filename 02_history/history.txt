@@ -1,6 +1,6 @@
 C was developed about the time that UNIX was born, it was derived from BCPL and then B which were used on the multics project by Ken Thompson in 1970 for a DEC PDP-7. B was interpreted, and typeless. Since it was typeless, it coudn't take advantage of all the "modern" hardware features, For example, byte addressing in the PDP-11.
 
-Ken Thompson and Dennis ritchie started work on a new language C, to overcome these limitations. At the same time UNIX development had started on the PDP-7 in assembly, and the idea was to port it to different families. A portable language was needed. So c was born around 1972
+Ken Thompson and Dennis Ritchie started work on a new language C, to overcome these limitations. At the same time UNIX development had started on the PDP-7 in assembly, and the idea was to port it to different families. A portable language was needed. So c was born around 1972
 
 There was no spec at this point, until Brian Kernigahn and Dennis Richie wrote "The C programming language" in 1978, this was kind of like the first spec.
 
