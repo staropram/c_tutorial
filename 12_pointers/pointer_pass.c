@@ -23,7 +23,10 @@ void f_working(int **p) {
 }
 
 int main() {
-	// assume we create an array of integers having size 3
+	// assume we create an arrays of integers having size 3
+	// we use two arrays because when we use only one we
+	// get to the problem that a pointer points to a address
+	// of a freed memory
 	int *a = malloc(3*sizeof(int));
 	int *b = malloc(3*sizeof(int));
 	
@@ -33,9 +36,9 @@ int main() {
 	printf("a after f_broken: %p\n",(int*)a);
 
 	// and now successfully using the working function
-	printf("a before f_working %p\n",(int*)b);
+	printf("b before f_working %p\n",(int*)b);
 	f_working(&b);
-	printf("a after f_working: %p\n",(int*)b);
+	printf("b after f_working: %p\n",(int*)b);
 
 	return 0;
 }
