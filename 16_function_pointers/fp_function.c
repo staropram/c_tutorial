@@ -37,8 +37,8 @@ int main() {
 
 	// if we pass the wrong function type, 
 	// undefined behaviour occurs
-	printf("muld:\n");
-	blend(a,b,5,muld);
+	// printf("muld:\n");
+	// blend(a,b,5,muld);
 
 	return 0;
 }
